@@ -4,7 +4,13 @@ from gymnasium.wrappers import RecordVideo
 from stable_baselines3 import PPO
 import highway_env
 
-from DT_car.driver_envs import register_custom_envs
+
+"""Generate short driving videos for three driver styles."""
+
+# The driver environments live inside a nested DT_car package directory. On some
+# systems this "DT_car.DT_car" layout can cause import issues if we refer only to
+# ``DT_car``. Importing using the full namespace avoids that problem.
+from DT_car.DT_car.driver_envs import register_custom_envs
 
 
 def generate_video(env_id: str, model_path: str, video_dir: str, name_prefix: str):
