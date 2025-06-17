@@ -4,6 +4,7 @@ from gymnasium.wrappers import RecordVideo
 from stable_baselines3 import PPO
 import highway_env
 
+
 """Generate short driving videos for three driver styles."""
 
 # The driver environments live inside a nested DT_car package directory. On some
