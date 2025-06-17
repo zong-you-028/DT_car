@@ -25,5 +25,11 @@ class CautiousHighwayEnv(HighwayEnv):
 
 
 def register_custom_envs():
-    register(id='highway-aggressive-v0', entry_point='driver_envs:AggressiveHighwayEnv')
-    register(id='highway-cautious-v0', entry_point='driver_envs:CautiousHighwayEnv')
+    register(
+        id="highway-aggressive-v0",
+        entry_point="DT_car.DT_car.driver_envs:AggressiveHighwayEnv",
+    )
+    register(
+        id="highway-cautious-v0",
+        entry_point="DT_car.DT_car.driver_envs:CautiousHighwayEnv",
+    )
